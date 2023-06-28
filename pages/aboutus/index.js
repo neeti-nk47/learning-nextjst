@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Aboutpage() {
   const details = [
     { id: 1, name: "Yash", role: "Senior Developer" },
@@ -11,8 +13,7 @@ function Aboutpage() {
       <ul>
         {details.map((ele) => (
           <li>
-            {" "}
-            <a href="/aboutus/"> {ele.name} </a>{" "}
+            <Link href={`/aboutus/${ele.id}`}> {ele.name} </Link>
           </li>
         ))}
       </ul>
